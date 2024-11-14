@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 40px;
+}
+
+.header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.header nav a:hover {
+    color: #b71c1c;
+}
+
+.cart-button {
+    background-color: #b71c1c;
+    color: #66ff58;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.product-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.product-info .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart:hover {
+    background-color: #b71c1c;
+}
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal.hidden {
+    display: none;
+}
+
+.cart-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close-cart {
+    background-color: #ff5c5c;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.success-message {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.success-message.hidden {
+    display: none;
+}
